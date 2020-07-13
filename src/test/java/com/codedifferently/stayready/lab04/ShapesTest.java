@@ -10,19 +10,36 @@ public class ShapesTest {
 
     @Test
     public void triangleTest(){
-        //: Given
+        //Given
+        String expected =
+        "*\n" +
+        "**\n" +
+        "***\n" +
+        "****\n" +
+        "*****\n";
 
-        //: When
+        //When
+        String actual = test.triangle();
 
-        //: Then
+        //Then
+        Assert.assertEquals(expected, actual);
+      
     }
 
     @Test
     public void tableSquareTest(){
-        //: Given
+        //Given
+        String expected =
+                        "  1 |  2 |  3 |  4 |\n" +
+                        "  2 |  4 |  6 |  8 |\n" +
+                        "  3 |  6 |  9 | 12 |\n" +
+                        "  4 |  8 | 12 | 16 |\n";
+                        
+        //When
+        String actual = test.tableSquare();
 
-        //: When
-
-        //: Then
+        //Then
+        Assert.assertEquals(expected, actual);
+      
     }
 }

@@ -33,11 +33,13 @@ public class NumbersTest {
 
     @Test
     public void squaresTest(){
-        //: Given
-
+        //Given
+        Numbers numbers = new Numbers();
+        String expected ="squares()\n*** Output ***\n1\n4\n9\n16\n25\n36\n49\n64\n81\n100";
         //: When
-
+        String actual = numbers.squares();
         //: Then
+        Assert.assertEquals("The two strings are equal",expected,actual)
     }
 
     @Test
@@ -51,20 +53,24 @@ public class NumbersTest {
 
     @Test
     public void evenTest(){
-        //: Given
-
+        //Given
+        Numbers numbers = new Numbers();
+        String expected ="even()\n*** Output ***\n2\n4\n6\n8\n10";
         //: When
-
+        String actual = numbers.even(10);
         //: Then
+        Assert.assertEquals("The two strings are equal",expected,actual);
     }
 
     @Test
     public void powersTest(){
         //: Given
-
+        Numbers numbers = new Numbers();
+        String expected ="powers()\n*** Output ***\n2\n4\n8";
         //: When
-
+        String actual = numbers.powers(3);
         //: Then
+        Assert.assertEquals("The two strings are equal",expected,actual);
     }
 
 }
